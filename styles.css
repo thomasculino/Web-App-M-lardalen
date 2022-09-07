@@ -1,0 +1,198 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+    width: 70%;
+    left: 15%;
+    position: absolute;
+}
+.inline {
+    display: flex;
+}
+.inline-nav {
+    margin-left: 150px;
+    display: flex;
+    margin-top: 10px;
+}
+.inline input[type=text] {
+    margin-left: 50px;
+    width: 150px;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    background-color: #2e3330;
+    background-image: url(images/magnifying_glass.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+.inline-nav > nav > a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+.small-nav {
+    background-color: #404040;
+    position: absolute;
+    padding: 6px;
+    margin-bottom: 6px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.small-nav > a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+}
+.sharing-icon {
+    width: 25px;
+    background: url(images/sharing.png);
+    background-size: 15px;
+    margin-top: 6px;
+    background-repeat: no-repeat;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% auto;
+    gap: 10px;
+    background-color: black;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    max-height: 200px;
+    min-height: 200px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .grid-container img {
+    min-width: 100%;
+  }
+  
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    max-height: 220px;
+    position: relative;
+  }
+  .item1 img {
+    height: 400px;
+    top: -75px;
+    position: absolute;
+  }
+  
+  .item4 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    position: relative;
+  }
+  .item2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  
+    position: relative;
+  }
+  .item2 img {
+    height: 300px;
+    top: -100px;
+    position: absolute;
+  }
+  
+  .item3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    position: relative;
+  }
+  .item3 img {
+    height: 300px;
+    top: -50px;
+    position: absolute;
+  }
+  
+  .item5 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    position: relative;
+  }
+  .item5 img {
+    height: 400px;
+    top: -50px;
+    left: -100px;
+    position: absolute;
+  }
+  
+  .item6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    position: relative;
+  }
+  .item6 img {
+    height: 400px;
+    top: -50px;
+    position: absolute;
+  }
+  
+  .item7 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    position: relative;
+  }
+  .item7 img {
+    height: 200px;
+    left: -20px;
+    position: absolute;
+  }
+  
+  .eventText {
+    padding-top: 10px;
+    font-size: 11px;
+  }
+  .nasaEventsDiv {
+    background-color: #2196f3;
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+  }
+  .nasaEventsDivScrollbar {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
+  
+  .eventNasaDivBottom {
+    height: 20%;
+    position: relative;
+    font-size: 13px;
+  }
+  
+  .nasaEventsDivBorderLine {
+    width: 100%;
+    height: 0.5px;
+    background-color: white;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 20px;
+  }
+  
+  .eventNasaDivBottomStretch {
+    display: stretch;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+  }
+  
+  .nasaStuff {
+    background-color: white;
+    color: black;
+    z-index: 1;
+    position: absolute;
+    max-width: 45%;
+    right: 0;
+    height: 80%;
+    margin: 10px;
+    padding: 0px 10px 10px 10px;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: scroll;
+  }
