@@ -192,6 +192,15 @@ body {
   .eventNasaDivBottomStretch > span{
     cursor: pointer;
   }
+
+  #CalendarLink {
+    float: left; 
+    padding-left: 30px;
+  }
+  #LaunchesLink {
+    float: right; 
+    padding-right: 30px;
+  }
   
   .nasaEventsDivBorderLine {
     width: 100%;
