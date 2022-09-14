@@ -107,6 +107,26 @@ body {
     position: absolute;
   }
 
+  .item3 img:hover {
+    cursor: crosshair;
+  }
+
+  .toHideOnHover {
+    visibility: visible;
+  }
+  .toShowOnHover {
+    visibility: hidden;
+  }
+
+  .item3:hover .toHideOnHover {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .item3:hover .toShowOnHover {
+    visibility: visible;
+    opacity: 1;
+  }
+
   .item4 {
     grid-column-start: 3;
     grid-column-end: 5;
@@ -248,6 +268,8 @@ body {
     padding-top:10px;
     font-size:16px;
     opacity: 0.7;
+    overflow: scroll;
+    max-height: 150px;
   }
 
   .textDecoration {
