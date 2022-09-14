@@ -2,6 +2,7 @@ body {
     background-color: #000000;
     color: #ffffff;
     font-size: 14px;
+    font-family: Helvetica, sans-serif;
     width: 70%;
     left: 15%;
     position: absolute;
@@ -29,20 +30,19 @@ body {
 .inline-nav > nav > a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
 }
 .small-nav {
     background-color: #404040;
     position: absolute;
     padding: 6px;
-    margin-bottom: 6px;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 .small-nav > a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
 }
 .sharing-icon {
     width: 25px;
@@ -84,11 +84,6 @@ body {
     position: absolute;
   }
   
-  .item4 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    position: relative;
-  }
   .item2 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -111,16 +106,26 @@ body {
     top: -50px;
     position: absolute;
   }
+
+  .item4 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    position: relative;
+  }
+
+  .item4 img {
+    height: 400px;
+    top: -50px;
+    position: absolute;
+  }
   
   .item5 {
     grid-column-start: 1;
     grid-column-end: 2;
     position: relative;
   }
-  .item5 img {
-    height: 400px;
-    top: -50px;
-    left: -100px;
+  .item5 iframe {
+    height: 100%;
     position: absolute;
   }
   
@@ -128,11 +133,6 @@ body {
     grid-column-start: 2;
     grid-column-end: 4;
     position: relative;
-  }
-  .item6 img {
-    height: 400px;
-    top: -50px;
-    position: absolute;
   }
   
   .item7 {
@@ -189,12 +189,63 @@ body {
     color: black;
     z-index: 1;
     position: absolute;
-    max-width: 45%;
+    max-width: calc(50% - 20px);
     right: 0;
-    height: 80%;
-    margin: 10px;
+    height: 100%;
     padding: 0px 10px 10px 10px;
     text-align: justify;
     text-justify: inter-word;
     overflow: scroll;
+  }
+
+  .titleOver {
+    position:absolute;
+    width:100px;
+    background-color:rgb(126, 126, 203);
+    bottom:58px;
+    left:20px;
+    padding-left:10px;
+    padding-top:10px;
+    font-size:16px;
+    opacity: 0.7;
+  }
+
+  .textOver {
+    position:absolute;
+    width:210px;
+    background-color:white;
+    bottom:30px;
+    left:20px;
+    padding-left:10px;
+    padding-top:10px;
+    font-size:16px;
+    opacity: 0.7;
+  }
+
+  .titleOver2 {
+    position:absolute;
+    width:130px;
+    background-color:rgb(126, 126, 203);
+    bottom:30px;
+    left:0;
+    padding-left:10px;
+    padding-top:10px;
+    font-size:16px;
+    opacity: 0.7;
+  }
+
+  .textOver2 {
+    position:absolute;
+    width:253px;
+    background-color:white;
+    bottom:0;
+    left:0;
+    padding-left:10px;
+    padding-top:10px;
+    font-size:16px;
+    opacity: 0.7;
+  }
+
+  .textDecoration {
+    color: #000000;
   }
