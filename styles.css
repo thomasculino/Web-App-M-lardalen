@@ -165,7 +165,11 @@ body {
   .eventNasaDivBottom {
     height: 20%;
     position: relative;
-    font-size: 13px;
+    font-size: 12px;
+  }
+
+  .eventNasaDivBottomStretch > span{
+    cursor: pointer;
   }
   
   .nasaEventsDivBorderLine {
