@@ -4,8 +4,8 @@ body {
     font-size: 14px;
     font-family: Helvetica, sans-serif;
     width: 70%;
-    left: 15%;
-    position: absolute;
+    min-width: 700px;
+    margin: 0px auto;
 }
 .inline {
     display: flex;
@@ -14,13 +14,16 @@ body {
     margin-left: 40px;
     display: flex;
     margin-top: 10px;
+    font-size: 10px;
 }
 .inline input[type=text] {
     margin-left: 50px;
+    right: 0;
     width: 150px;
     padding: 6px;
     border: none;
     font-size: 17px;
+    color: white;
     background-color: #2e3330;
     background-image: url(images/magnifying_glass.png);
     background-size: 20px;
@@ -30,13 +33,14 @@ body {
 .inline-nav > nav > a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 12px;
 }
 .small-nav {
     background-color: #404040;
-    position: absolute;
     padding: 6px;
+    max-width: 900px;
     margin-left: 30px;
+    margin-right: 10px;
     margin-top: 35px;
 }
 .small-nav > a {
@@ -102,25 +106,37 @@ body {
     position: absolute;
   }
 
-  .item3 img:hover {
-    cursor: crosshair;
-  }
-
   .toHideOnHover {
-    visibility: visible;
+    display: block;
+    position: absolute;
+    width:100%;
+    min-height: 10%;
+    bottom: 0;
+    z-index: 1;
   }
   .toShowOnHover {
     visibility: hidden;
+    z-index: 0;
+    overflow: scroll;
+    height: 100%;
   }
 
-  .item3:hover .toHideOnHover {
+  .containerHiddenBoxes {
+    display: block;
+    position:absolute; 
+    width:100%; 
+    height:100%; 
+    bottom: 0; 
+  }
+
+ .toHideOnHover:hover > .toHideOnHoverChild {
     visibility: hidden;
-    opacity: 0;
   }
-  .item3:hover .toShowOnHover {
-    visibility: visible;
-    opacity: 1;
-  }
+  
+ .toHideOnHover:hover ~ .toShowOnHover {
+  visibility: visible;
+}
+
 
   .item4 {
     grid-column-start: 3;
@@ -234,12 +250,11 @@ body {
 
   .titleOver {
     position:absolute;
-    width:100px;
+    width:fit-content;
     background-color:rgb(126, 126, 203);
     bottom:58px;
     left:20px;
-    padding-left:10px;
-    padding-top:10px;
+    padding:10px;
     font-size:16px;
     opacity: 0.7;
   }
@@ -257,29 +272,19 @@ body {
   }
 
   .titleOver2 {
-    position:absolute;
-    width:130px;
     background-color:rgb(126, 126, 203);
-    bottom:30px;
-    left:0;
-    padding-left:10px;
-    padding-top:10px;
+    width: fit-content;
+    padding:5px;
     font-size:16px;
     opacity: 0.7;
   }
 
   .textOver2 {
-    position:absolute;
-    width:253px;
     background-color:white;
-    bottom:0;
-    left:0;
-    padding-left:10px;
-    padding-top:10px;
-    font-size:16px;
+    padding:10px;
+    font-size:15px;
     opacity: 0.7;
-    overflow: scroll;
-    max-height: 150px;
+    overflow:scroll;
   }
 
   .textDecoration {

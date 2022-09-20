@@ -18,4 +18,4 @@ setInterval(function() {
     }
     img.src = images[i];
     i++;
-}, 2000);
+}, 20000);
