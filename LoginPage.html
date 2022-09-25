@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styleAdminPage.css" />
+    <link rel="stylesheet" type="text/css" href="styleLoginPage.css" />
+  </head>
+  <body>
+    <div class="inline">
+      <div>
+        <img src="images/nasa_logo.png" alt="logo" width="100" height="100" />
+      </div>
+      <div id="centerTitle">
+        <h1>LOGIN</h1>
+      </div>
+      <div id="goback">
+        <form action="/Exercise1.html">
+          <button
+            class="gobackButton"
+            type="submit"
+            value="/AdminPage.html"
+            title="Go to the admin page"
+          >
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="content">
+        <div class="login-container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            
+            <div>
+                <form action="./AdminPage.html">
+                    <button type="submit" class="gobackButton">Login</button>
+                </form>
+                <label id="rememberme">
+                  <input type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+          </div>
+    </div>
+  </body>
+</html>
