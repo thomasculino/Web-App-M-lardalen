@@ -181,12 +181,13 @@ body {
     grid-column-start: 4;
     grid-column-end: 5;
     position: relative;
+    height: 100%;
   }
-  .item7 img {
+  /* .item7 img {
     height: 200px;
     left: -20px;
     position: absolute;
-  }
+  } */
   
   .eventText {
     padding-top: 10px;
