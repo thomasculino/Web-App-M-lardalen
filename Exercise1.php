@@ -27,7 +27,7 @@
             class="sharing-icon"
             title="This button does nothing"
           ></button>
-          <form action="/Web-App-M-lardalen/LoginPage.html">
+          <form action="./LoginPage.html">
             <button
               class="admin-icon"
               type="submit"
