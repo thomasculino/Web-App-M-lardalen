@@ -39,7 +39,8 @@
                     <button type="submit" class="gobackButton">Login</button>
                 </form>
                 <label id="rememberme">
-                  <input type="checkbox" name="remember"> Remember me
+                  <input type="checkbox" name="remember" value="<?php setcookie("rememberme", $username, $cookie_expiration_time) { ?"> checked
+                    <?php } ?>"> Remember me
                 </label>
             </div>
           </div>
