@@ -20,7 +20,7 @@ if (!isset($_SESSION['rememberme'])) {
   </head>
   <body>
     <script src="script.js"></script>
-<script
+    <script
       async
       src="https://platform.twitter.com/widgets.js"
       charset="utf-8"
@@ -78,7 +78,15 @@ if (!isset($_SESSION['rememberme'])) {
         <div class="nasaEventsDiv">
           <div class="nasaEventDivText">
             <?php
-              $json = file_get_contents("Ressources/Ass2News.json");
+              $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+              $params = parse_url($url);
+              if (array_key_exists("query", $params) == 1) {
+                parse_str($params['query'], $param);
+                $json = file_get_contents("Ressources/".$param['jsonFile']); 
+              }
+              else {
+                $json = file_get_contents("Ressources/Ass2News.json");
+              }
               $data = json_decode($json, true);
               $title = $data["news"][0]['title'];
               echo "<h4>$title</h4>";
@@ -86,8 +94,6 @@ if (!isset($_SESSION['rememberme'])) {
             <div class="nasaEventsDivScrollbar"></div>
             <div class="eventText">
             <?php
-              $file = file_get_contents("Ressources/Ass2News.json");
-              $data = json_decode($file, true);
               echo $data["news"][0]["content"];
             ?>
             </div>
@@ -105,8 +111,6 @@ if (!isset($_SESSION['rememberme'])) {
       </div>
       <div class="grid-item item3">
         <?php
-          $json = file_get_contents("Ressources/Ass2News.json");
-          $data = json_decode($json, true);
           $image = $data["news"][1]['imgurl'];
           echo "<img src='$image' />";
         ?>
@@ -117,8 +121,6 @@ if (!isset($_SESSION['rememberme'])) {
                 <a>
                 <b>
                   <?php
-                    $file = file_get_contents("Ressources/Ass2News.json");
-                    $data = json_decode($file, true);
                     echo $data["news"][1]["title"];
                   ?>
                   </b>
@@ -128,8 +130,6 @@ if (!isset($_SESSION['rememberme'])) {
                 <a class="textDecoration">
                 <b>
                   <?php
-                    $file = file_get_contents("Ressources/Ass2News.json");
-                    $data = json_decode($file, true);
                     echo $data["news"][1]["previewContent"];
                   ?>
                   </b>
@@ -142,8 +142,6 @@ if (!isset($_SESSION['rememberme'])) {
               <a class="textDecoration">
               <b>
                   <?php
-                    $file = file_get_contents("Ressources/Ass2News.json");
-                    $data = json_decode($file, true);
                     echo $data["news"][1]["content"];
                   ?>
                   </b>
@@ -156,22 +154,16 @@ if (!isset($_SESSION['rememberme'])) {
         <div id="wrapper">
           <div id="first">
             <?php
-              $json = file_get_contents("Ressources/Ass2News.json");
-              $data = json_decode($json, true);
               $image = $data["news"][2]['imgurl'];
               echo "<img src='$image' />";
             ?>
           </div>
           <div class="nasaStuff">
           <?php
-              $json = file_get_contents("Ressources/Ass2News.json");
-              $data = json_decode($json, true);
               $title = $data["news"][2]['title'];
               echo "<h3>$title</h3>";
             ?>
             <?php
-              $file = file_get_contents("Ressources/Ass2News.json");
-              $data = json_decode($file, true);
               echo $data["news"][2]["content"];
             ?>
           </div>

@@ -43,12 +43,13 @@
     border: 1px solid white;
 }
 
-.textFile > div {
+.textFile > form {
     margin: 0 auto;
     align-content: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction:column;
+    padding: 10px;
 }
 
 .textFile > div > input[type=text] {
