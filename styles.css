@@ -25,7 +25,7 @@ body {
     font-size: 17px;
     color: white;
     background-color: #2e3330;
-    background-image: url(images/magnifying_glass.png);
+    background-image: url(Ressources/magnifying_glass.png);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: right center;
@@ -53,6 +53,7 @@ body {
     height: 25px;
     cursor:pointer;
     background: url(images/padlock.png) no-repeat;
+    background: url(Ressources/sharing.png);
     background-size: 15px;
     margin-top: 8px;
     margin-left: 6px;
@@ -61,7 +62,7 @@ body {
 .sharing-icon {
   width: 25px;
   cursor:pointer;
-  background: url(images/sharing.png);
+  background: url(Ressources/sharing.png);
   background-size: 15px;
   margin-top: 8px;
   margin-left: 6px;
@@ -297,6 +298,7 @@ body {
     font-size:15px;
     opacity: 0.7;
     overflow:scroll;
+    height: 100%;
   }
 
   .textDecoration {

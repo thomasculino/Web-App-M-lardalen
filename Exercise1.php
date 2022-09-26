@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="inline">
+      <div>
+        <img src="Ressources/nasa_logo.png" alt="logo" width="100" height="100" />
+      </div>
+      <div>
+        <div class="inline-nav">
+          <nav>
+            <a href="#">Missions</a> | <a href="#">Galleries</a> |
+            <a href="#">NASA TV</a> | <a href="#">Follow NASA</a> |
+            <a href="#">Downloads</a> | <a href="#">About</a> |
+            <a href="#">NASA Audiences</a>
+          </nav>
+          <input type="text" placeholder="Search.." />
+          <button class="sharing-icon"></button>
+        </div>
+        <div>
+          <nav class="small-nav">
+            <a>International Space Station</a> | <a>Journey to Mars</a> |
+            <a>Earth</a> | <a>Technology</a> | <a>Aeronautics</a> |
+            <a>Solar System and Beyond</a> | <a>Education</a> | <a>History</a> |
+            <a>Benefits to You</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item item1" style="overflow: hidden">
+        <img id="item1img" src="Ressources/pic4.jpg" />
+        <div class="titleOver">
+          <a><b id="item1title">Lift-off</b></a>
+        </div>
+        <div class="textOver">
+          <a class="textDecoration">
+            <b id="item1text">New lift-off yesterday</b>
+          </a>
+        </div>
+      </div>
+      <div class="grid-item item2">
+        <div class="nasaEventsDiv">
+          <div class="nasaEventDivText">
+            <?php
+              $json = file_get_contents("Ressources/Ass2News.json");
+              $data = json_decode($json, true);
+              $title = $data["news"][0]['title'];
+              echo "<h4>$title</h4>";
+            ?>
+            <div class="nasaEventsDivScrollbar"></div>
+            <div class="eventText">
+            <?php
+              $file = file_get_contents("Ressources/Ass2News.json");
+              $data = json_decode($file, true);
+              echo $data["news"][0]["content"];
+            ?>
+            </div>
+          </div>
+          <div class="eventNasaDivBottom">
+            <div class="nasaEventsDivBorderLine"></div>
+            <div class="eventNasaDivBottomStretch">
+              <span id="CalendarLink"> <a>Calendar</a> </span>
+              <span id="LaunchesLink">
+                <a>Launches and landings</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item item3">
+        <?php
+          $json = file_get_contents("Ressources/Ass2News.json");
+          $data = json_decode($json, true);
+          $image = $data["news"][1]['imgurl'];
+          echo "<img src='$image' />";
+        ?>
+        <div class="containerHiddenBoxes">
+          <div class="toHideOnHover">
+            <div class="toHideOnHoverChild">
+              <div class="titleOver2">
+                <a>
+                <b>
+                  <?php
+                    $file = file_get_contents("Ressources/Ass2News.json");
+                    $data = json_decode($file, true);
+                    echo $data["news"][1]["title"];
+                  ?>
+                  </b>
+                </a>
+              </div>
+              <div class="textOver2">
+                <a class="textDecoration">
+                <b>
+                  <?php
+                    $file = file_get_contents("Ressources/Ass2News.json");
+                    $data = json_decode($file, true);
+                    echo $data["news"][1]["previewContent"];
+                  ?>
+                  </b>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="toShowOnHover">
+            <div class="textOver2">
+              <a class="textDecoration">
+              <b>
+                  <?php
+                    $file = file_get_contents("Ressources/Ass2News.json");
+                    $data = json_decode($file, true);
+                    echo $data["news"][1]["content"];
+                  ?>
+                  </b>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item item4" style="width: 100%">
+        <div id="wrapper">
+          <div id="first">
+            <?php
+              $json = file_get_contents("Ressources/Ass2News.json");
+              $data = json_decode($json, true);
+              $image = $data["news"][2]['imgurl'];
+              echo "<img src='$image' />";
+            ?>
+          </div>
+          <div class="nasaStuff">
+          <?php
+              $json = file_get_contents("Ressources/Ass2News.json");
+              $data = json_decode($json, true);
+              $title = $data["news"][2]['title'];
+              echo "<h3>$title</h3>";
+            ?>
+            <?php
+              $file = file_get_contents("Ressources/Ass2News.json");
+              $data = json_decode($file, true);
+              echo $data["news"][2]["content"];
+            ?>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item item5">
+        <iframe
+          src="Ressources/video1.mp4"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="grid-item item6"><img src="Ressources/pic6.jpg" /></div>
+      <div class="grid-item item7"><img src="Ressources/pic7.jpg" /></div>
+    </div>
+  </body>
+</html>
