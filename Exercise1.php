@@ -5,6 +5,11 @@
   </head>
   <body>
     <script src="script.js"></script>
+<script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
     <div class="inline">
       <div>
         <img src="Ressources/nasa_logo.png" alt="logo" width="100" height="100" />
@@ -18,7 +23,18 @@
             <a href="#">NASA Audiences</a>
           </nav>
           <input type="text" placeholder="Search.." />
-          <button class="sharing-icon"></button>
+          <button
+            class="sharing-icon"
+            title="This button does nothing"
+          ></button>
+          <form action="/Web-App-M-lardalen/LoginPage.html">
+            <button
+              class="admin-icon"
+              type="submit"
+              value="./LoginPage.html"
+              title="Go to the admin page"
+            ></button>
+          </form>
         </div>
         <div>
           <nav class="small-nav">
@@ -153,7 +169,17 @@
         ></iframe>
       </div>
       <div class="grid-item item6"><img src="Ressources/pic6.jpg" /></div>
-      <div class="grid-item item7"><img src="Ressources/pic7.jpg" /></div>
+      <div class="grid-item item7">
+        <a
+          class="twitter-timeline"
+          data-width="300"
+          data-height="300"
+          data-dnt="true"
+          data-theme="dark"
+          href="https://twitter.com/NASA?ref_src=twsrc%5Etfw"
+          >Tweets by NASA</a
+        >
+      </div>
     </div>
   </body>
 </html>
