@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 $cookie_name = "user";
 $cookie_value = get_current_user();
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-echo "User name: " . $_COOKIE[$cookie_name]
+
+if (!isset($_SESSION['user'])) {
+  $_SESSION["user"] = $cookie_value;
+}
+if (!isset($_SESSION['rememberme'])) {
+  $_SESSION["rememberme"] = "";
+}
+
 ?>
 <html>
   <head>
@@ -33,7 +42,8 @@ echo "User name: " . $_COOKIE[$cookie_name]
             class="sharing-icon"
             title="This button does nothing"
           ></button>
-          <form action="./LoginPage.html">
+          <form action=<?php if(isset($_SESSION["rememberme"]) and $_SESSION["rememberme"] != "") { echo "./AdminPage.php";
+} else { echo "./LoginPage.php";} ?>>
             <button
               class="admin-icon"
               type="submit"
