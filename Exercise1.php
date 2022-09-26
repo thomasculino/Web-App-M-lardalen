@@ -13,6 +13,14 @@ if (!isset($_SESSION['rememberme'])) {
   $_SESSION["rememberme"] = "";
 }
 
+function checkArrayNotEmpty($array) {
+  if(count(array_filter($array)) == count($array)) {
+    return True;
+} else {
+    return False;
+}
+}
+
 ?>
 <html>
   <head>
@@ -80,7 +88,7 @@ if (!isset($_SESSION['rememberme'])) {
             <?php
               $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
               $params = parse_url($url);
-              if (array_key_exists("query", $params) == 1) {
+              if (array_key_exists("query", $params) == 1 and checkArrayNotEmpty($params)) {
                 parse_str($params['query'], $param);
                 $json = file_get_contents("Ressources/".$param['jsonFile']); 
               }
