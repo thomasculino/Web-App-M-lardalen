@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+$cookie_name = "user";
+$cookie_value = get_current_user();
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+echo "User name: " . $_COOKIE[$cookie_name]
+?>
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css" />
