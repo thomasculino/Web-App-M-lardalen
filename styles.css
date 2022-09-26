@@ -52,7 +52,7 @@ body {
     width: 25px;
     height: 25px;
     cursor:pointer;
-    background: url(images/padlock.png) no-repeat;
+    background: url(Ressources/padlock.png);
     background: url(Ressources/sharing.png);
     background-size: 15px;
     margin-top: 8px;
