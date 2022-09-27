@@ -37,7 +37,7 @@ if (session_status() === PHP_SESSION_NONE) {
       <input type="password" placeholder="Enter Password" name="password" required>
 
       <div>
-        <form action=<?php $_SESSION["rememberme"] = "checked";
+        <form action=<?php
                     echo "./AdminPage.php" ?>>
           <button type="submit" class="gobackButton">Login</button>
         </form>

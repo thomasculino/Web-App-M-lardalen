@@ -14,11 +14,7 @@ if (!isset($_SESSION['rememberme'])) {
 }
 
 function checkArrayNotEmpty($array) {
-  if(count(array_filter($array)) == count($array)) {
-    return True;
-} else {
-    return False;
-}
+  return count(array_filter($array)) == count($array);
 }
 
 ?>
