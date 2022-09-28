@@ -67,9 +67,11 @@ $_SESSION["rememberme"] = "checked";
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["chooseTextFile"])) {
           $filepath = $_POST["chooseTextFile"];
           print_r($filepath);
-          $myfile = fopen("Ressources/filename.txt", "r") or die("Unable to open file!");
+          $myfile = fopen("Ressources/NewsToDisplay.txt", "r+") or die("Unable to open file!");
           fwrite($myfile, $filepath);
           fclose($myfile);
+
+          header("Location: ./Exercise1.php");
         }
       ?>
     </div>

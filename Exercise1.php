@@ -82,25 +82,17 @@ function checkArrayNotEmpty($array) {
         <div class="nasaEventsDiv">
           <div class="nasaEventDivText">
             <?php
-              $myfile = fopen("Ressources/filename.txt", "r") or die("Unable to open file!");
-              $filesize = filesize("Ressources/filename.txt");
+              $myfile = fopen("Ressources/NewsToDisplay.txt", "r") or die("Unable to open file!");
+              $filesize = filesize("Ressources/NewsToDisplay.txt");
               if ($filesize > 0) {
-                $fileContent = fread($myfile,$filesize);
-                echo "<script>console.log('$fileContent');</script>";
-              }
-              fclose($myfile);
-
-
-              
-              $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-              $params = parse_url($url);
-              if (array_key_exists("query", $params) == 1 and checkArrayNotEmpty($params)) {
-                parse_str($params['query'], $param);
-                $json = file_get_contents("Ressources/".$param['jsonFile']); 
+                $filename = fread($myfile,$filesize);
+                $json = file_get_contents("Ressources/".$filename); 
               }
               else {
                 $json = file_get_contents("Ressources/Ass2News.json");
               }
+              fclose($myfile);
+
               $data = json_decode($json, true);
               $title = $data["news"][0]['title'];
               echo "<h4>$title</h4>";
