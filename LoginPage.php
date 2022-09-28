@@ -31,7 +31,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <div class="content">
     <div class="login-container">
       <form action=<?php
-                    echo "./AdminPage.php" ?>>
+                    echo "./AdminPage.php" ?> method="POST">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required>
 

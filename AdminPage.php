@@ -9,6 +9,7 @@ $_SESSION["rememberme"] = "checked";
 
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="styleLoginPage.css" />
   <link rel="stylesheet" type="text/css" href="styleAdminPage.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
