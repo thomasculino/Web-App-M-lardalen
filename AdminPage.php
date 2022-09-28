@@ -49,7 +49,7 @@ $_SESSION["rememberme"] = "checked";
       <h1>
         Choose text file
       </h1>
-      <form name="myForm" method="POST" action="javascript:changeUrl()" onsubmit="return validationForm()">
+      <form name="myForm" method="POST" action="./AdminPage.php" onsubmit="return validationForm()">
         <input type="text" placeholder="Choose a text file" name="chooseTextFile">
         <input type="submit" value="Apply">
       </form>
@@ -62,12 +62,16 @@ $_SESSION["rememberme"] = "checked";
             return false;
           }
         }
-
-        function changeUrl() {
-          var x = document.forms["myForm"]["chooseTextFile"].value;
-          window.location.href = "./Exercise1.php?jsonFile=" + x;
-        }
       </script>
+      <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["chooseTextFile"])) {
+          $filepath = $_POST["chooseTextFile"];
+          print_r($filepath);
+          $myfile = fopen("Ressources/filename.txt", "r") or die("Unable to open file!");
+          fwrite($myfile, $filepath);
+          fclose($myfile);
+        }
+      ?>
     </div>
     <h3>List of files availables</h3>
     <ul>
