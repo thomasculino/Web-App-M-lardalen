@@ -30,21 +30,21 @@ if (session_status() === PHP_SESSION_NONE) {
   </div>
   <div class="content">
     <div class="login-container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required>
-
-      <div>
-        <form action=<?php
+      <form action=<?php
                     echo "./AdminPage.php" ?>>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <div>
           <button type="submit" class="gobackButton">Login</button>
-        </form>
-        <label id="rememberme">
-          <input type="checkbox" name="remember" <?php if (isset($_SESSION["rememberme"]) and $_SESSION["rememberme"] != "") { ?> checked <?php } ?>> Remember me
-        </label>
-      </div>
+          <label id="rememberme">
+            <input type="checkbox" name="remember" <?php if (isset($_SESSION["rememberme"]) and $_SESSION["rememberme"] != "") { ?> checked <?php } ?>> Remember me
+          </label>
+        </div>
+      </form>
     </div>
   </div>
 </body>
